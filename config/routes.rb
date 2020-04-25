@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+ 
   get 'welcome/index'
   resources :articles
   root 'welcome#index'
@@ -11,4 +12,13 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+
+  resources :users
+
+  resources :sessions
+    get 'signup' => 'users#new'
+    get "login"  => "sessions#login"
+    post "login_attempt"  => "sessions#login_attempt"
+    get"logout"  => "sessions#logout"
+  
 end
