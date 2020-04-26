@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-    # load_and_authorize_resource
+    load_and_authorize_resource
   # http_basic_authenticate_with name: "mayar", password: "secret", except: [:index, :show]
     before_action :authenticate_user!,except: [:index, :show]
     
