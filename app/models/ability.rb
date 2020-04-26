@@ -10,7 +10,8 @@ class Ability
         can :update, Article, user_id: user.id
         can :destroy, Article, user_id: user.id
         can :create, Article, user_id: user.id
-       
+        can :create, Comment
+        can :destroy, Comment
       end
     # Define abilities for the passed in user here. For example:
     #
